@@ -1,0 +1,32 @@
+INSTALL THE SERVER
+
+npm init -y
+
+npm i express apollo-server-express bcryptjs jsonwebtoken consola esm cors mongoose yup body-parser
+
+//bcryptjs for hashing encryption
+
+//GET ALL RECORD
+query HELLO {
+  getAllPosts {
+    title
+    content
+    featureImage
+  }
+}
+
+POST RECORD
+mutation CREATE_NEW_POST ($title:String!, $content:String!, $featureImage:String) {
+  createNewPost(
+    newPost: {
+    title: $title
+    content: $content
+    featureImage: $featureImage
+  }
+  ) {
+    title
+    content
+    featureImage
+  }
+}
+
